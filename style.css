@@ -98,7 +98,11 @@ body {
 }
 
 #elements{
-	display: ;
+	display: none;
+}
+
+#elements-parent #right{
+	display: none;
 }
 
 #sidebar .side-menu li {
@@ -234,16 +238,21 @@ body {
 	height: 36px;
 }
 #content nav form .form-input input {
-	flex-grow: 1;
 	padding: 0 16px;
 	height: 100%;
-	border: none;
+	border: none; 
 	background: var(--grey);
 	border-radius: 36px 0 0 36px;
 	outline: none;
 	width: 100%;
 	color: var(--dark);
 }
+
+@media(max-width: 600px){
+	#content nav form .form-input input {
+		width: 60px;
+	}}
+
 #content nav form .form-input button {
 	width: 36px;
 	height: 100%;
@@ -284,6 +293,40 @@ body {
 	object-fit: cover;
 	border-radius: 50%;
 }
+
+
+
+ #profile-elements{
+	display: none;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	right: 30px;
+	top: 40px;
+	padding: 10px;
+	background: var(--grey);
+	box-shadow: 6px 6px 8px rgb(160, 160, 160);
+	border-radius: 6px;
+}
+
+#profile-elements li {
+	padding: 4px 0;
+}
+
+#profile-elements li a{
+	font-size: 16px;
+}
+
+
+#profile-elements li:hover a{
+	color: var(--blue);
+}
+
+
+
+
+
+
 #content nav .switch-mode {
 	display: block;
 	min-width: 50px;
@@ -455,6 +498,14 @@ body {
 	font-size: 24px;
 	font-weight: 600;
 }
+
+#content main .table-data .head span {
+	font-size: 21px;
+	font-weight: 500;
+	color: rgb(82, 82, 82);
+}
+
+
 #content main .table-data .head .bx {
 	cursor: pointer;
 }

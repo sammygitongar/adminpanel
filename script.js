@@ -74,3 +74,54 @@ switchMode.addEventListener('change', function () {
 		document.body.classList.remove('dark');
 	}
 })
+
+// ============Elements Show Hide===============
+
+const elements_parent = document.getElementById("elements-parent");
+const elements = document.getElementById("elements");
+const right = document.getElementById("right");
+const down = document.getElementById("down");
+
+// Add event listener to elements_parent
+elements_parent.addEventListener("click", function() {
+    // Toggle display property of elements
+    if (elements.style.display === "none" || elements.style.display === "") {
+        elements.style.display = "block";
+        right.style.display = "block";
+        down.style.display = "none"; 
+    } else {
+        elements.style.display = "none";
+        right.style.display = "none";
+        down.style.display = "block";
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var profileElements = document.getElementById("profile-elements");
+    var profImage = document.getElementById("prof");
+
+    profImage.addEventListener("click", function(event) {
+        event.stopPropagation();
+        if (profileElements.style.display === "none") {
+            profileElements.style.display = "flex";
+        } else {
+            profileElements.style.display = "none";
+        }
+    });
+
+    document.addEventListener("click", function(event) {
+        if (event.target !== profImage) {
+            profileElements.style.display = "none";
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
