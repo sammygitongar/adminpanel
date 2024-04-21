@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
     profImage.addEventListener("click", function(event) {
         event.stopPropagation();
         if (profileElements.style.display === "none") {
-            profileElements.style.display = "flex";
+            profileElements.style.display = "block";
         } else {
             profileElements.style.display = "none";
         }
